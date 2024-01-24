@@ -1,0 +1,76 @@
+devices:
+
+  r1:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r2:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r3:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r4:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r5:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r6:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r7:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+  r8:
+    platform: spitfire_f
+    image:  7.3.4.FCS
+
+
+connections:
+    hubs:
+        hub0:
+            - r1.FourHundredGigE0/0/0/0
+            - r2.FourHundredGigE0/0/0/0
+        hub1:
+            - r1.FourHundredGigE0/0/0/1
+            - r3.FourHundredGigE0/0/0/1
+        hub2:
+            - r2.FourHundredGigE0/0/0/1
+            - r4.FourHundredGigE0/0/0/1
+        hub3:
+            - r1.FourHundredGigE0/0/0/2
+            - r4.FourHundredGigE0/0/0/2
+        hub4:
+            - r2.FourHundredGigE0/0/0/2
+            - r3.FourHundredGigE0/0/0/2
+        hub5:
+            - r3.FourHundredGigE0/0/0/3
+            - r5.FourHundredGigE0/0/0/3
+        hub6:
+            - r4.FourHundredGigE0/0/0/4
+            - r5.FourHundredGigE0/0/0/4
+        hub7:
+            - r4.FourHundredGigE0/0/0/3
+            - r6.FourHundredGigE0/0/0/3
+        hub8:
+            - r5.FourHundredGigE0/0/0/1
+            - r7.FourHundredGigE0/0/0/1
+        hub9:
+            - r6.FourHundredGigE0/0/0/1
+            - r8.FourHundredGigE0/0/0/1
+        hub10:
+            - r5.FourHundredGigE0/0/0/2
+            - r8.FourHundredGigE0/0/0/2
+        hub11:
+            - r6.FourHundredGigE0/0/0/2
+            - r7.FourHundredGigE0/0/0/2
+        hub12:
+            - r7.FourHundredGigE0/0/0/0
+            - r8.FourHundredGigE0/0/0/0
