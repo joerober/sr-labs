@@ -84,23 +84,23 @@ topology:
       binds: [config/r8.cfg:/startup.cfg:ro]
 
   links:
-    - endpoints: ["r1:FH0_0_0_0", "r2:FH0_0_0_0"]
-    - endpoints: ["r1:FH0_0_0_1", "r3:FH0_0_0_1"]
-    - endpoints: ["r1:FH0_0_0_2", "r4:FH0_0_0_2"]
+    - endpoints: ["R1:FH0_0_0_0", "R2:FH0_0_0_0"]
+    - endpoints: ["R1:FH0_0_0_1", "R3:FH0_0_0_1"]
+    - endpoints: ["R1:FH0_0_0_2", "R4:FH0_0_0_2"]
 
-    - endpoints: ["r2:FH0_0_0_1", "r4:FH0_0_0_1"]
-    - endpoints: ["r2:FH0_0_0_2", "r3:FH0_0_0_2"]
+    - endpoints: ["R2:FH0_0_0_1", "R4:FH0_0_0_1"]
+    - endpoints: ["R2:FH0_0_0_2", "R3:FH0_0_0_2"]
 
-    - endpoints: ["r3:FH0_0_0_3", "r5:FH0_0_0_3"]
+    - endpoints: ["R3:FH0_0_0_3", "R5:FH0_0_0_3"]
 
-    - endpoints: ["r4:FH0_0_0_4", "r5:FH0_0_0_4"]    
-    - endpoints: ["r4:FH0_0_0_3", "r6:FH0_0_0_3"]  
+    - endpoints: ["R4:FH0_0_0_4", "R5:FH0_0_0_4"]    
+    - endpoints: ["R4:FH0_0_0_3", "R6:FH0_0_0_3"]  
 
-    - endpoints: ["r5:FH0_0_0_1", "r7:FH0_0_0_1"]  
-    - endpoints: ["r5:FH0_0_0_2", "r8:FH0_0_0_2"] 
+    - endpoints: ["R5:FH0_0_0_1", "R7:FH0_0_0_1"]  
+    - endpoints: ["R5:FH0_0_0_2", "R8:FH0_0_0_2"] 
 
-    - endpoints: ["r6:FH0_0_0_1", "r8:FH0_0_0_1"]  
-    - endpoints: ["r6:FH0_0_0_2", "r7:FH0_0_0_2"] 
+    - endpoints: ["R6:FH0_0_0_1", "R8:FH0_0_0_1"]  
+    - endpoints: ["R6:FH0_0_0_2", "R7:FH0_0_0_2"] 
 
-    - endpoints: ["r7:FH0_0_0_0", "r8:FH0_0_0_0"] 
+    - endpoints: ["R7:FH0_0_0_0", "R8:FH0_0_0_0"] 
 
