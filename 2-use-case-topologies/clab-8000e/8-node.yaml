@@ -35,42 +35,72 @@ topology:
       image: 8201-32fh-clab:7.9.1
 
   nodes:
-    8201-r1:
+    R1:
       kind: linux
-      mgmt-ipv4: 172.20.6.101
-      mgmt-ipv6: 2001:db8:20:6::101
-      binds: [config/8201-r1.cfg:/startup.cfg:ro]
+      mgmt-ipv4: 172.20.8.101
+      mgmt-ipv6: 2001:db8:20:8::101
+      binds: [config/r1.cfg:/startup.cfg:ro]
 
-    8201-r2:
+    R2:
       kind: linux
-      mgmt-ipv4: 172.20.6.102
-      mgmt-ipv6: 2001:db8:20:6::102
-      binds: [config/8201-r2.cfg:/startup.cfg:ro]
+      mgmt-ipv4: 172.20.8.102
+      mgmt-ipv6: 2001:db8:20:8::102
+      binds: [config/r2.cfg:/startup.cfg:ro]
 
-    8201-r3:
+    R3:
       kind: linux
-      mgmt-ipv4: 172.20.6.103
-      mgmt-ipv6: 2001:db8:20:6::103
-      binds: [config/8201-r3.cfg:/startup.cfg:ro]
+      mgmt-ipv4: 172.20.8.103
+      mgmt-ipv6: 2001:db8:20:8::103
+      binds: [config/r3.cfg:/startup.cfg:ro]
 
-    8201-r4:
+    R4:
       kind: linux
-      mgmt-ipv4: 172.20.6.104
-      mgmt-ipv6: 2001:db8:20:6::104
-      binds: [config/8201-r4.cfg:/startup.cfg:ro]
+      mgmt-ipv4: 172.20.8.104
+      mgmt-ipv6: 2001:db8:20:8::104
+      binds: [config/r4.cfg:/startup.cfg:ro]
+
+    R5:
+      kind: linux
+      mgmt-ipv4: 172.20.8.105
+      mgmt-ipv6: 2001:db8:20:8::105
+      binds: [config/r5.cfg:/startup.cfg:ro]
+
+    R6:
+      kind: linux
+      mgmt-ipv4: 172.20.8.106
+      mgmt-ipv6: 2001:db8:20:8::106
+      binds: [config/r6.cfg:/startup.cfg:ro]
+
+    R7:
+      kind: linux
+      mgmt-ipv4: 172.20.8.107
+      mgmt-ipv6: 2001:db8:20:8::107
+      binds: [config/r7.cfg:/startup.cfg:ro]
+
+    R8:
+      kind: linux
+      mgmt-ipv4: 172.20.8.108
+      mgmt-ipv6: 2001:db8:20:8::108
+      binds: [config/r8.cfg:/startup.cfg:ro]
 
   links:
-    - endpoints: ["8201-r1:FH0_0_0_0", "8201-r3:FH0_0_0_0"]
-    - endpoints: ["8201-r1:FH0_0_0_1", "8201-r3:FH0_0_0_1"]
+    - endpoints: ["r1:FH0_0_0_0", "r2:FH0_0_0_0"]
+    - endpoints: ["r1:FH0_0_0_1", "r3:FH0_0_0_1"]
+    - endpoints: ["r1:FH0_0_0_2", "r4:FH0_0_0_2"]
 
-    - endpoints: ["8201-r1:FH0_0_0_2", "8201-r4:FH0_0_0_0"]
-    - endpoints: ["8201-r1:FH0_0_0_3", "8201-r4:FH0_0_0_1"]
+    - endpoints: ["r2:FH0_0_0_1", "r4:FH0_0_0_1"]
+    - endpoints: ["r2:FH0_0_0_2", "r3:FH0_0_0_2"]
 
-    - endpoints: ["8201-r2:FH0_0_0_0", "8201-r3:FH0_0_0_2"]
-    - endpoints: ["8201-r2:FH0_0_0_1", "8201-r3:FH0_0_0_3"]
-    
-    - endpoints: ["8201-r2:FH0_0_0_2", "8201-r4:FH0_0_0_2"]
-    - endpoints: ["8201-r2:FH0_0_0_3", "8201-r4:FH0_0_0_3"]
+    - endpoints: ["r3:FH0_0_0_3", "r5:FH0_0_0_3"]
 
-    - endpoints: ["8201-r3:FH0_0_0_4", "8201-r4:FH0_0_0_4"]
-    - endpoints: ["8201-r3:FH0_0_0_5", "8201-r4:FH0_0_0_5"]
+    - endpoints: ["r4:FH0_0_0_4", "r5:FH0_0_0_4"]    
+    - endpoints: ["r4:FH0_0_0_3", "r6:FH0_0_0_3"]  
+
+    - endpoints: ["r5:FH0_0_0_1", "r7:FH0_0_0_1"]  
+    - endpoints: ["r5:FH0_0_0_2", "r8:FH0_0_0_2"] 
+
+    - endpoints: ["r6:FH0_0_0_1", "r8:FH0_0_0_1"]  
+    - endpoints: ["r6:FH0_0_0_2", "r7:FH0_0_0_2"] 
+
+    - endpoints: ["r7:FH0_0_0_0", "r8:FH0_0_0_0"] 
+
